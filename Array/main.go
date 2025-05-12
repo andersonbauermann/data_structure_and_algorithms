@@ -6,7 +6,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		println("Uso: go run main.go [binary_search|reverse_string]")
+		println("Uso: go run main.go [binary_search|reverse_string|sliding_window|exponential_search]")
 		return
 	}
 
@@ -15,6 +15,10 @@ func main() {
 		printBinarySearch()
 	case "reverse_string":
 		printReverse()
+	case "sliding_window":
+		printSlidingWindow()
+	case "exponential_search":
+		printExponentialSearch()
 	default:
 		println("Opção inválida.'")
 	}

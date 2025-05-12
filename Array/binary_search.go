@@ -5,8 +5,21 @@ import (
 	"math/rand"
 )
 
-func search(nums []int, target int) (int, int) {
-	left, right, steps := 0, len(nums)-1, 0
+func search(nums []int, target int, l *int, r *int, s *int) (int, int) {
+	left := 0
+	if l != nil {
+		left = *l
+	}
+
+	right := len(nums) - 1
+	if r != nil {
+		right = *r
+	}
+
+	steps := 0
+	if s != nil {
+		steps = *s
+	}
 
 	for left <= right {
 		steps++
@@ -34,7 +47,7 @@ func printBinarySearch() {
 	fmt.Println("Array:", nums)
 	fmt.Println("Elemento a ser encontrado:", target)
 
-	result, steps := search(nums, target)
+	result, steps := search(nums, target, nil, nil, nil)
 
 	if result != -1 {
 		fmt.Printf("Elemento encontrado na posição: %d, número de passos executados %d", result, steps)
