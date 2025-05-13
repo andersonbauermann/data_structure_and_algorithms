@@ -37,3 +37,20 @@ func printSlidingWindow() {
 	fmt.Println("String testada:", str)
 	fmt.Println("Maior string:", maxArray)
 }
+
+/*
+Um algoritmo de busca eficiente para encontrar padrões ou somas em subconjuntos contínuos de um array
+Funciona através de uma “janela” que se move sobre o array, mantendo o controle de uma parte do array por vez, sem repetir cálculos desnecessários
+
+Como funciona:
+	-Define o tamanho da janela (quantos elementos serão analisados de cada vez)
+	-Calcula o valor inicial da janela (por exemplo, a soma dos primeiros k elementos)
+	-Desliza a janela uma posição por vez:
+	-Remove o elemento que saiu da janela
+	-Adiciona o novo elemento que entrou
+	-Atualiza o valor (por exemplo, soma) conforme necessário
+	-Repete até percorrer todo o array ou encontrar a condição desejada
+
+Complexidade:
+O(n) no pior caso
+*/

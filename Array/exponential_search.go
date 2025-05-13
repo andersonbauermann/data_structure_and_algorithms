@@ -38,3 +38,18 @@ func printExponentialSearch() {
 		println("Elemento não encontrado.")
 	}
 }
+
+/*
+Um algoritmo de busca para encontrar um elemento em um array ordenado.
+Combina expansão rápida (exponencial) + busca binária refinada.
+
+Funciona em duas etapas:
+	-Fase de expansão: Dobra o índice de busca até achar um valor maior ou igual ao alvo.
+	-Fase de refinamento: Usa busca binária no intervalo encontrado.
+
+Melhor que busca binária pura se o elemento estiver no começo.
+Mais eficaz em arrays muito grandes (diminui o espaço de busca rapidamente).
+Complexidade:
+	O(log n) para a fase de expansão.
+	O(log n) para a fase de refinamento.
+*/

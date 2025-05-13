@@ -55,3 +55,20 @@ func printBinarySearch() {
 		fmt.Println("Elemento não encontrado.")
 	}
 }
+
+/*
+Um algoritmo de busca eficiente para encontrar um elemento em um array ordenado
+Funciona através de divisão e conquista, repetidamente dividindo o espaço de busca pela metade
+
+Como funciona:
+	-Define os limites inicial (esquerda) e final (direita)
+	-Calcula o ponto médio entre os limites
+	-Compara o elemento médio com o alvo:
+		Se igual: retorna a posição
+		Se menor: busca na metade inferior
+		Se maior: busca na metade superior
+	-Repete até encontrar o elemento ou esgotar o espaço de busca
+
+Complexidade:
+	O(log n) no pior caso
+*/
