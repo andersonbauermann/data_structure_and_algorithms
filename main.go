@@ -27,6 +27,10 @@ func main() {
 		linked_list.PrintCreateSinglyLinkedList()
 	case "invert_linked_list":
 		linked_list.PrintInvertSingleLinkedList()
+	case "find_middle_linked_list":
+		linked_list.PrintFindMiddle()
+	case "veify_loop_linked_list":
+		linked_list.PrintVerifyLoop()
 	default:
 		println("Opção inválida.'")
 	}
