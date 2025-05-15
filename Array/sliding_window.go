@@ -1,4 +1,4 @@
-package main
+package array
 
 import "fmt"
 
@@ -31,7 +31,7 @@ func maxLengthSubstring(s string) int {
 	return maxLen
 }
 
-func printSlidingWindow() {
+func PrintSlidingWindow() {
 	str := "bcbbbcbaab"
 	maxArray := maxLengthSubstring(str)
 	fmt.Println("String testada:", str)

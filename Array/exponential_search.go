@@ -1,4 +1,4 @@
-package main
+package array
 
 import "fmt"
 
@@ -26,7 +26,7 @@ func exponentialSearch(arr []int, target int) (int, int) {
 	return search(arr, target, &left, &right, &steps)
 }
 
-func printExponentialSearch() {
+func PrintExponentialSearch() {
 	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	target := 8
 

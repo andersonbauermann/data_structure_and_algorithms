@@ -1,4 +1,4 @@
-package main
+package array
 
 import (
 	"fmt"
@@ -36,7 +36,7 @@ func search(nums []int, target int, l *int, r *int, s *int) (int, int) {
 	return -1, steps
 }
 
-func printBinarySearch() {
+func PrintBinarySearch() {
 	nums := make([]int, 101)
 	for i := 0; i <= 100; i++ {
 		nums[i] = i

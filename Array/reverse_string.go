@@ -1,4 +1,4 @@
-package main
+package array
 
 import (
 	"fmt"
@@ -26,7 +26,7 @@ func reverseSegment(chars []rune, start, end int) {
 	}
 }
 
-func printReverse() {
+func PrintReverse() {
 	fmt.Println(reverseWords("hello world"))
 	fmt.Println(reverseWords("Go is awesome"))
 }
