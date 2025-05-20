@@ -7,8 +7,8 @@ func invertList(head *SingleNode) *SingleNode {
 	current := head
 
 	for current != nil {
-		next := current.next
-		current.next = prev
+		next := current.Next
+		current.Next = prev
 		prev = current
 		current = next
 	}
@@ -24,19 +24,19 @@ func PrintInvertSingleLinkedList() {
 	list.AddToFront(5)
 
 	fmt.Print("Original List: ")
-	printList(list.head)
+	PrintList(list.Head)
 
-	invertedHead := invertList(list.head)
+	invertedHead := invertList(list.Head)
 
 	fmt.Print("Inverted List: ")
-	printList(invertedHead)
+	PrintList(invertedHead)
 }
 
-func printList(head *SingleNode) {
+func PrintList(head *SingleNode) {
 	current := head
 	for current != nil {
-		fmt.Printf("%d ", current.value)
-		current = current.next
+		fmt.Printf("%d ", current.Value)
+		current = current.Next
 	}
 	fmt.Println()
 }

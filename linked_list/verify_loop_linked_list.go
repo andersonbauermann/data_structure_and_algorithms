@@ -10,9 +10,9 @@ func hasLoop(head *SingleNode) bool {
 	slow := head
 	fast := head
 
-	for fast != nil && fast.next != nil {
-		slow = slow.next
-		fast = fast.next.next
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
 
 		if slow == fast {
 			return true
@@ -30,9 +30,9 @@ func PrintVerifyLoop() {
 	list.AddToFront(5)
 	list.AddToEnd(30)
 
-	list.head.next.next.next = list.head // CRIA O LOOP
+	list.Head.Next.Next.Next = list.Head // CRIA O LOOP
 
-	if hasLoop(list.head) {
+	if hasLoop(list.Head) {
 		fmt.Println("The linked list has a loop.")
 	} else {
 		fmt.Println("The linked list does not have a loop.")

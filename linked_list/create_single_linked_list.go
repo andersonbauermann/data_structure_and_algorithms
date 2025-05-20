@@ -3,39 +3,39 @@ package linked_list
 import "fmt"
 
 type SingleNode struct {
-	value int
-	next  *SingleNode
+	Value int
+	Next  *SingleNode
 }
 
 type SinglyLinkedList struct {
-	head *SingleNode
+	Head *SingleNode
 }
 
 func (sll *SinglyLinkedList) AddToFront(value int) {
-	newNode := &SingleNode{value: value}
-	newNode.next = sll.head
-	sll.head = newNode
+	newNode := &SingleNode{Value: value}
+	newNode.Next = sll.Head
+	sll.Head = newNode
 }
 
 func (sll *SinglyLinkedList) AddToEnd(value int) {
-	newNode := &SingleNode{value: value}
-	if sll.head == nil {
-		sll.head = newNode
+	newNode := &SingleNode{Value: value}
+	if sll.Head == nil {
+		sll.Head = newNode
 	} else {
-		current := sll.head
-		for current.next != nil {
-			current = current.next
+		current := sll.Head
+		for current.Next != nil {
+			current = current.Next
 		}
-		current.next = newNode
+		current.Next = newNode
 	}
 }
 
 func (sll *SinglyLinkedList) RemoveFromFront() *int {
-	if sll.head == nil {
+	if sll.Head == nil {
 		return nil
 	}
-	removedValue := sll.head.value
-	sll.head = sll.head.next
+	removedValue := sll.Head.Value
+	sll.Head = sll.Head.Next
 	return &removedValue
 }
 

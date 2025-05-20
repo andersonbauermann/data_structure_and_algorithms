@@ -2,17 +2,17 @@ package linked_list
 
 import "fmt"
 
-func findMiddle(head *SingleNode) *SingleNode {
-	if head == nil {
-		return nil
+func FindMiddle(head *SingleNode) *SingleNode {
+	if head == nil || head.Next == nil {
+		return head
 	}
 
 	slow := head
-	fast := head
+	fast := head.Next
 
-	for fast != nil && fast.next != nil {
-		slow = slow.next
-		fast = fast.next.next
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
 	}
 
 	return slow
@@ -27,12 +27,12 @@ func PrintFindMiddle() {
 	list.AddToEnd(30)
 
 	fmt.Print("Original List: ")
-	printList(list.head)
+	PrintList(list.Head)
 
-	middleNode := findMiddle(list.head)
+	middleNode := FindMiddle(list.Head)
 
 	if middleNode != nil {
-		fmt.Printf("Middle Node: %d\n", middleNode.value)
+		fmt.Printf("Middle Node: %d\n", middleNode.Value)
 	} else {
 		fmt.Println("List is empty.")
 	}

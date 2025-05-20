@@ -3,6 +3,7 @@ package main
 import (
 	"data_structure/array"
 	"data_structure/linked_list"
+	"data_structure/sorting"
 	"os"
 )
 
@@ -31,6 +32,12 @@ func main() {
 		linked_list.PrintFindMiddle()
 	case "veify_loop_linked_list":
 		linked_list.PrintVerifyLoop()
+	case "bubble_sort":
+		sorting.PrintBubbleSort()
+	case "quick_sort":
+		sorting.PrintQuickSort()
+	case "merge_sort":
+		sorting.PrintMergeSort()
 	default:
 		println("Opção inválida.'")
 	}
