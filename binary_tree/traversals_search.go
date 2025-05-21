@@ -51,12 +51,21 @@ func PrintTraversals() {
 }
 
 /*
+
+      1
+     / \
+    2   3
+   / \
+  4   5
+
 Postorder (Pós-ordem)
 Ordem: Esquerda → Direita → Raiz
 Comportamento:
 	-Visita primeiro todos os nós da subárvore esquerda.
 	-Depois os da direita.
 	-E por último, o nó atual (raiz).
+Resultado para a árvore exemplo:
+	[4, 5, 2, 3, 1] -- root fica po último
 Usos comuns:
 Útil para deletar a árvore (liberar memória).
 Também usado em algumas operações de avaliação de expressão (ex: árvores de expressão matemática).
@@ -67,6 +76,8 @@ Comportamento:
 	-Visita primeiro o nó atual (raiz).
 	-Depois visita os nós da subárvore esquerda.
 	-Por fim, os da subárvore direita.
+Resultado para a árvore exemplo:
+	[1, 2, 4, 5, 3] -- root fica primeiro
 Usos comuns:
 Útil para copiar uma árvore.
 Serve para salvar a estrutura da árvore (por exemplo, serialização).
@@ -77,6 +88,8 @@ Comportamento:
 	-Visita todos os nós da subárvore esquerda.
 	-Depois visita o nó atual (raiz).
 	-Depois visita todos os nós da subárvore direita.
+Resultado para a árvore exemplo:
+	[4, 2, 5, 1, 3] -- root fica no meio
 Resultado:
 Em uma árvore binária de busca (BST), retorna os valores em ordem crescente.
 */

@@ -43,6 +43,10 @@ func main() {
 		binary_tree.PrintBinaryTreeSearch()
 	case "binary_tree_traversals":
 		binary_tree.PrintTraversals()
+	case "binary_tree_dfs":
+		binary_tree.PrintDFS()
+	case "binary_tree_bfs":
+		binary_tree.PrintBFS()
 	default:
 		println("Opção inválida.'")
 	}
