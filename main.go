@@ -2,6 +2,7 @@ package main
 
 import (
 	"data_structure/array"
+	"data_structure/binary_tree"
 	"data_structure/linked_list"
 	"data_structure/sorting"
 	"os"
@@ -38,6 +39,10 @@ func main() {
 		sorting.PrintQuickSort()
 	case "merge_sort":
 		sorting.PrintMergeSort()
+	case "create_binary_tree":
+		binary_tree.PrintBinaryTreeSearch()
+	case "binary_tree_traversals":
+		binary_tree.PrintTraversals()
 	default:
 		println("Opção inválida.'")
 	}
