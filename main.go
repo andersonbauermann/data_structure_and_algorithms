@@ -3,6 +3,7 @@ package main
 import (
 	"data_structure/array"
 	"data_structure/binary_tree"
+	"data_structure/graph"
 	"data_structure/linked_list"
 	"data_structure/sorting"
 	"os"
@@ -47,6 +48,8 @@ func main() {
 		binary_tree.PrintDFS()
 	case "binary_tree_bfs":
 		binary_tree.PrintBFS()
+	case "dijkstra":
+		graph.PrintShortestPath("A")
 	default:
 		println("Opção inválida.'")
 	}
