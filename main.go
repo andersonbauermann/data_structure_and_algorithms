@@ -6,6 +6,7 @@ import (
 	"data_structure/graph"
 	"data_structure/linked_list"
 	"data_structure/sorting"
+	"data_structure/stack"
 	"os"
 )
 
@@ -50,6 +51,8 @@ func main() {
 		binary_tree.PrintBFS()
 	case "dijkstra":
 		graph.PrintShortestPath("A")
+	case "create_stack":
+		stack.PrintStack()
 	default:
 		println("Opção inválida.'")
 	}
