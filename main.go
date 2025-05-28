@@ -4,6 +4,7 @@ import (
 	"data_structure/array"
 	"data_structure/binary_tree"
 	"data_structure/graph"
+	"data_structure/heap"
 	"data_structure/linked_list"
 	"data_structure/sorting"
 	"data_structure/stack"
@@ -53,6 +54,8 @@ func main() {
 		graph.PrintShortestPath("A")
 	case "create_stack":
 		stack.PrintStack()
+	case "create_min_heap":
+		heap.PrintMinHeap()
 	default:
 		println("Opção inválida.'")
 	}
